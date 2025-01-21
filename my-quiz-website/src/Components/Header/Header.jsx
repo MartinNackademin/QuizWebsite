@@ -2,10 +2,10 @@ import { HeaderMenuItem } from "./HeaderMenuItem"
 
 function Header() {
     return (
-        <header>
+        <header className="bg-gray-400 p-2">
             <h1>My Quiz Website</h1>
             <nav>
-                <ul>
+                <ul className="flex flex-row space-x-4 border-b-2">
                 <HeaderMenuItem  headerName="Home" navLink="/" />
                 <HeaderMenuItem  headerName="Quiz" navLink="/Quiz" />
                 </ul>
@@ -13,3 +13,5 @@ function Header() {
         </header>
     );
 }
+
+export default Header

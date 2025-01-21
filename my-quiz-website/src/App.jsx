@@ -1,8 +1,8 @@
-import Header from './Components/Header/Header'
+import Header from './Components/Header/Header.jsx'
 import Footer from './Components/Footer/Footer.jsx'
 import { createHashRouter, RouterProvider, Outlet} from 'react-router-dom';
-import { Home } from './Components/Home/Home';
-import { Quiz } from './Components/Pages/Quiz';
+import { Home } from './Components/Pages/Home/Home.jsx';
+import { Quiz } from './Components/Pages/Quiz/quiz.jsx';
 
 function Layout() {
     return (
