@@ -6,7 +6,7 @@ function Footer() {
     return (
     <>
       <footer className='flex justify-between items-center font-bold p-4 bg-gray-300'>
-        (C) {currentYear}  Martin Mohns. The best Quiz website EU nordic
+        (C) {currentYear}  Martin Mohns. The best Quiz website EU nordic 
       </footer>    
     </>
     )
