@@ -1,4 +1,9 @@
 [
+  {
+    "question": "Index",
+    "options": ["Index", "Index", "Index"],
+    "answer": "Index"
+  },
     {
       "question": "What is the capital of France?",
       "options": ["Berlin", "Madrid", "Paris"],
