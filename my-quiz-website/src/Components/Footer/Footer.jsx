@@ -4,9 +4,9 @@ function Footer() {
   const currentYear = new Date().getFullYear();
     return (
     <>
-      <footer className='flex justify-between items-center font-bold p-4 bg-base-200 text-base-content'>
-        (C) {currentYear}  Martin Mohns. The best Quiz website EU nordic 
-      </footer>    
+       <div className="flex justify-between text-center items-center font-bold p-4 bg-inherit text-base-content border-base-200 mt-auto">
+        (C) {currentYear}  Martin Mohns.
+      </div>    
     </>
     )
   }

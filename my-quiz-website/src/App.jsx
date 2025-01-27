@@ -7,11 +7,19 @@ import { Quiz } from './Components/Pages/Quiz/quiz.jsx';
 
 function Layout({ toggleTheme }) {
     return (
-        <>
-            <Header toggleTheme={toggleTheme} />
-            <Outlet />
-            <Footer />
-        </>
+    <> 
+<div className="flex flex-col min-h-screen">
+    <header>
+        <Header toggleTheme={toggleTheme} />
+    </header>
+    <main className="flex-grow">
+        <Outlet />
+    </main>
+    <footer>
+        <Footer />
+    </footer>
+</div>
+    </>
     );
 }
 

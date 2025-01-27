@@ -4,7 +4,8 @@ import QuizDisplay from './QuizDisplay';
 function QuizManager() {
     
     const [Questiondatabase, setQuestiondatabase] = useState([]);
-    const [loading, setLoading] = useState(true);   
+    const [loading, setLoading] = useState(true); 
+
     const [displayContent, toggledisplayContent] = useState('startScreen');
     const [userinput, setUserinput] = useState('');
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -58,8 +59,6 @@ function QuizManager() {
         setCurrentScore(0);
         setCurrentQuestionIndex(0);
     }
-
-
     
     const handleAnswerClick = (option) => {
         setUserinput(option);
@@ -99,14 +98,11 @@ function QuizManager() {
     return (
         <>       
                  <QuizDisplay
-                  displayContent={displayContent}
-                  question={currentQuestion.question}options={currentQuestion.options}answer={currentQuestion.answer}
-                  handleAnswerClick={handleAnswerClick}startQuiz={startQuiz}updateQuestion={updateQuestion}
-                  userinput={userinput}score={score}
-                  countdown={countdown}
+                  displayContent={displayContent}  // state variable
+                  question={currentQuestion.question}options={currentQuestion.options}answer={currentQuestion.answer} // json data
+                  handleAnswerClick={handleAnswerClick}startQuiz={startQuiz}updateQuestion={updateQuestion} // functions
+                  userinput={userinput}score={score}countdown={countdown}currentQuestionIndex={currentQuestionIndex} // session variables
                 /> 
-          
-        
         </>
     );
 }
