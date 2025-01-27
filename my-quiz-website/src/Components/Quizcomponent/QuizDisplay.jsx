@@ -4,7 +4,7 @@ function QuizDisplay({
      displayContent, // state for displaying different screens
      question,options,answer, // Json file information
      handleAnswerClick,startQuiz,updateQuestion, // functions to handle user input 
-     userinput, // user input
+     userinput,score, // user variables
     
     }){
     
@@ -39,13 +39,6 @@ function QuizDisplay({
         );
     }
 
-    if (displayContent === 'endScreen') {
-        currentContent =(
-            <div className="flex flex-col space-y-2 mt-4">Whatever nerd you came to the end
-            </div>
-        );
-    }
-
     if (displayContent === 'answerScreen') {
         currentContent =(
         <>
@@ -59,6 +52,19 @@ function QuizDisplay({
             </button>   
 
         </>
+        );
+    }
+
+    if (displayContent === 'endScreen') {
+        currentContent =(
+            <>
+             <div className="flex flex-col space-y-2 mt-4">You came to the end of the quiz!</div>
+             <div className="flex flex-col space-y-2 mt-4">you scored:</div>
+            <button onClick={startQuiz} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-4" >
+            Start New Quiz
+            </button> 
+            </>  
+            
         );
     }
 

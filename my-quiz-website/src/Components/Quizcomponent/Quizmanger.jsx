@@ -8,6 +8,7 @@ function QuizManager() {
     const [userinput, setUserinput] = useState('');
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [score, setCurrentScore] = useState(0);
     const currentQuestion = Questiondatabase[currentQuestionIndex];
     
     
@@ -29,24 +30,24 @@ function QuizManager() {
 
     const correctAnswer = () => {
         console.log("Correct answer");
-
+        setCurrentScore(score + 1);
 
     }
     const wrongAnswer = () => {
         console.log("Wrong answer");
+        
     }
 
     const updateQuestion = () => {
-        console.log("Question updated");
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-        console.log("it should re render with new question");
-        console.log(currentQuestion.answer);
-        if(currentQuestionIndex >= Questiondatabase.length - 1){
-            
+        if(currentQuestionIndex === Questiondatabase.length - 1){
             toggledisplayContent('endScreen');
+            console.log('End of quiz');
+            setCurrentQuestionIndex(0);
         }
         else{
             toggledisplayContent('questionScreen');
+            console.log('Next question');
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
         }
     }
 
@@ -60,6 +61,7 @@ function QuizManager() {
                   startQuiz={startQuiz}
                   userinput={userinput}
                   updateQuestion={updateQuestion}
+                  score={score}
                   
                 />
           
