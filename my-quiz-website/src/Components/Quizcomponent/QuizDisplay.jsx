@@ -16,7 +16,7 @@ function QuizDisplay({
         <>
         <div className="flex justify-center item-center font-bold text-3xl" >Welcome to the quiz</div>
             
-            <button onClick={startQuiz} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-4" >
+            <button onClick={startQuiz} className="btn btn-primary mt-4" >
             Start New Quiz
             </button>    
         </>
@@ -34,7 +34,7 @@ function QuizDisplay({
                 {options.map((option, uniqueid) => (
                     <button
                         key={uniqueid}
-                        className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
+                        className="btn btn-accent"
                         onClick={() => handleAnswerClick(option)}
                     >
                         {option}
@@ -53,7 +53,7 @@ function QuizDisplay({
                 <div className="flex justify-center item-center font-bold text-3xl" >Correct Answer:&nbsp;<p className="text-green-500" >{answer}</p></div>
                 <div className="flex justify-center item-center font-bold text-3xl" >Your Answer:&nbsp;{userinput}</div>
             </div>
-            <button onClick={updateQuestion} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-4" >
+            <button onClick={updateQuestion} className="btn btn-primary mt-4">
             Continue
             </button>   
 
@@ -65,12 +65,13 @@ function QuizDisplay({
         currentContent =(
             <>
              <div className="flex flex-col space-y-2 mt-4">You came to the end of the quiz!</div>
+             
              <div>
              <div className="flex flex-col space-y-2 mt-4 font-bold text-2xl text-center">you scored:</div>
              <div className="flex flex-col space-y-2 mt-4 font-bold text-4xl  text-center" >{score}</div>
              </div>
              
-            <button onClick={startQuiz} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-4" >
+            <button onClick={startQuiz} className="btn btn-primary mt-4" >
             Start New Quiz
             </button> 
             </>  
