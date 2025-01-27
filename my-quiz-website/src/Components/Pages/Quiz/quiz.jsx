@@ -1,11 +1,10 @@
 import React from 'react';
-import Quizcomponent from '../../Quizcomponent/QuizComponent';
+import QuizComponent from '../../Quizcomponent/Quizcomponent';
 
-
-    export const Quiz = () => {
-        return (
-            <section>
-            <Quizcomponent/>
-            </section>
-        )
-    }
+export const Quiz = () => {
+    return (
+        <section>
+            <QuizComponent />
+        </section>
+    );
+};
