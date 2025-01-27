@@ -1,10 +1,10 @@
 import React from 'react';
-import QuizComponent from '../../Quizcomponent/Quizcomponent';
+import QuizContainer from '../../Quizcomponent/QuizContainer.jsx';
 
 export const Quiz = () => {
     return (
         <section>
-            <QuizComponent />
+            <QuizContainer/>
         </section>
     );
 };

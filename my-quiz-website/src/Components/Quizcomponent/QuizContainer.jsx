@@ -1,7 +1,7 @@
 import React from 'react';
 import Quizmanager from './QuizManger.jsx';
 
-function Quizcomponent() {
+function QuizContainer() {
     
     
     return (
@@ -14,4 +14,4 @@ function Quizcomponent() {
     );
 }
 
-export default Quizcomponent;
+export default QuizContainer;
