@@ -4,7 +4,7 @@ function QuizDisplay({
      displayContent, // state for displaying different screens
      question,options,answer, // Json file information
      handleAnswerClick,startQuiz,updateQuestion, // functions to handle user input 
-     userinput,score,countdown,currentQuestionIndex // session variables
+     userInput,score,countdown,currentQuestionIndex // session variables
     
     }){
     
@@ -68,7 +68,7 @@ function QuizDisplay({
             <div className="flex justify-center item-center font-bold " >{question}</div>
             <div>
                 <div className="flex justify-center item-center font-bold " >Correct Answer:&nbsp;<p className="text-green-500" >{answer}</p></div>
-                <div className="flex justify-center item-center font-bold " >Your Answer:&nbsp;{userinput}</div>
+                <div className="flex justify-center item-center font-bold " >Your Answer:&nbsp;{userInput}</div>
             </div>
             <button onClick={updateQuestion} className="btn btn-primary mt-4">
             Continue

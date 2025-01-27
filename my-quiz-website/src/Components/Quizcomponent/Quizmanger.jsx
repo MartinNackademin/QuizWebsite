@@ -15,13 +15,13 @@ function QuizManager() {
         fetch('/question-database.json')
             .then(response => response.json())
             .then(data => {
-                console.log('Fetched data:', data); // Log fetched data
+                console.log('Fetched data:', data); 
                 setQuestionDatabase(data);
-                setLoading(false); // Set loading to false after data is fetched
+                setLoading(false); 
             })
             .catch(error => {
                 console.error('Error fetching questions:', error);
-                setLoading(false); // Set loading to false even if there's an error
+                setLoading(false); 
             });
     }, []);
 
@@ -90,7 +90,7 @@ function QuizManager() {
         <>       
             <QuizDisplay
                 displayContent={displayContent}  // state variable
-                question={currentQuestion?.question} options={currentQuestion?.options} answer={currentQuestion?.answer} // json data
+                question={currentQuestion.question} options={currentQuestion.options} answer={currentQuestion.answer} // json data
                 handleAnswerClick={handleAnswerClick} startQuiz={startQuiz} updateQuestion={updateQuestion} // functions
                 userInput={userInput} score={score} countdown={countdown} currentQuestionIndex={currentQuestionIndex} // session variables
             /> 
