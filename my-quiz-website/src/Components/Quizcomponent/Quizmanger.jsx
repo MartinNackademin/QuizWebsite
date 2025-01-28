@@ -4,11 +4,14 @@ import QuizDisplay from './QuizDisplay';
 function QuizManager() {
     const [questionDatabase, setQuestionDatabase] = useState([]);
     const [loading, setLoading] = useState(true); 
+
     const [displayContent, setDisplayContent] = useState('startScreen');
+
     const [userInput, setUserInput] = useState('');
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setCurrentScore] = useState(0); 
     const [countdown, setCountdown] = useState(10);
+    
     const intervalRef = useRef(null);
 
     useEffect(() => {
